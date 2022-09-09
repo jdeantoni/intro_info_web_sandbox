@@ -1,0 +1,7 @@
+{
+  "@jupyterlab/notebook-extension:tracker": {
+    "renderingLayout": "side-by-side"
+  },
+  "@jupyterlab/apputils-extension:palette": {"modal": false}
+
+}

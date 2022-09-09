@@ -1,2 +1,1 @@
-# intro_info_web_sandbox
-jupyterlite instance to tests freely anything
+instance of jupyterlite that can be used to test anything freely (copy/paste of notebook, etc)
