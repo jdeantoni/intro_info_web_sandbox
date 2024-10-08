@@ -13,7 +13,7 @@ class Pixel:
 
     # Permet de vérifier que les valeurs R,G,B sont valides.
     # La fonction __init__ est appelée lors de la création du pixel.
-    def __init__(self,r,g,b):
+    def __init__(self,r: int,g: int,b:int):
         if type(r) != int or type(g) != int or type(b) != int:
             raise TypeError('Colors componants (r,g,b) must be integer')
         if max([r,g,b]) > 255 or min([r,g,b]) < 0:
@@ -31,7 +31,7 @@ class ImagePPM:
     
     # Permet de vérifier que les valeurs width et height sont bien valides
     # La fonction __init__ est appelée lors de la création de l’image.
-    def __init__(self,width,height,pixels):
+    def __init__(self,width:int,height:int,pixels:list):
         if width * height != len(pixels):
             raise ValueError("Dimensions values does not match length of pixels list")
         self.width = width
@@ -45,8 +45,9 @@ def showImageFromPath(path):
     # So we fix that by the following
     #img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     cv2.imwrite(".temp.png",img) 
-    Image(filename='.temp.png') 
+    pngImage =Image(filename='.temp.png') 
     os.remove(".temp.png") 
+    return pngImage
 
 def showImage(imgppm):
     saveImage(imgppm, '.temp.ppm')
@@ -55,9 +56,10 @@ def showImage(imgppm):
     # So we fix that by the following
     #img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     cv2.imwrite(".temp.png",img) 
-    Image(filename='.temp.png') 
+    pngImage = Image(filename='temp.png') 
     os.remove(".temp.png") 
     os.remove('.temp.ppm')
+    return pngImage
 
 def loadImage(path):
     allPixels = []
