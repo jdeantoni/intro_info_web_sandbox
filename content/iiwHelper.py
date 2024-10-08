@@ -1,6 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
-from PIL import Image
+from IPython.display import Image
 import os
 
 from dataclasses import dataclass
@@ -45,8 +45,7 @@ def showImageFromPath(path):
     # So we fix that by the following
     #img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     cv2.imwrite(".temp.png",img) 
-    img2 = Image.open(".temp.png")
-    img2.show()
+    Image(filename='.temp.png') 
     os.remove(".temp.png") 
 
 def showImage(imgppm):
@@ -56,8 +55,7 @@ def showImage(imgppm):
     # So we fix that by the following
     #img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     cv2.imwrite(".temp.png",img) 
-    img2 = Image.open(".temp.png")
-    img2.show()
+    Image(filename='.temp.png') 
     os.remove(".temp.png") 
     os.remove('.temp.ppm')
 
