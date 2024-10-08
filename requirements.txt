@@ -12,6 +12,7 @@ jupyterlite==0.4.2
 jupyterlite-pyodide-kernel==0.4.2
 jupyterlite-p5-kernel==0.1.1
 matplotlib
+opencv-contrib-python
 lckr-jupyterlab-variableinspector
 nbformat
 jupyter-sphinx
