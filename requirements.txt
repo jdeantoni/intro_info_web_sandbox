@@ -11,6 +11,7 @@ jupyterlab_miami_nights
 jupyterlite==0.4.2
 jupyterlite-pyodide-kernel==0.4.2
 jupyterlite-p5-kernel==0.1.1
+matplotlib
 lckr-jupyterlab-variableinspector
 nbformat
 jupyter-sphinx
