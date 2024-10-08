@@ -56,7 +56,7 @@ def showImage(imgppm):
     # So we fix that by the following
     #img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     cv2.imwrite(".temp.png",img) 
-    pngImage = Image(filename='temp.png') 
+    pngImage = Image(filename='.temp.png') 
     os.remove(".temp.png") 
     os.remove('.temp.ppm')
     return pngImage
